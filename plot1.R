@@ -1,0 +1,6 @@
+setwd("C:/Users/shafae1/ExData_Plotting1")
+library("data.table")
+d <- fread("household_power_consumption.txt", na.strings = "?")
+png("plot1.png")
+hist(subset(d, Date %in% c("1/2/2007","2/2/2007"))$Global_active_power, col = "red", xlab = "Global Active Power (kilowatts)", main = "Global Active Power")
+dev.off()
